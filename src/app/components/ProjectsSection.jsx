@@ -2,16 +2,7 @@
 
 import React, { useRef } from "react";
 import ProjectCard from "./ProjectCard";
-
-const projectsData = [
-  {
-    id: 1,
-    title: "Meal Arrangement App - Let's Eat",
-    description:
-      "An app which allows NUS students to effortlessly coordinate meals with others. Technologies used: React Native, Firebase, Git",
-    image: "/images/letseat.png",
-  },
-];
+import projectsData from "../data/projectsData";
 
 const ProjectsSection = () => {
   const ref = useRef(null);
@@ -30,6 +21,7 @@ const ProjectsSection = () => {
               title={project.title}
               description={project.description}
               imgUrl={project.image}
+              tags={project.tags}
             />
           ))}
         </ul>

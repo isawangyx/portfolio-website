@@ -12,6 +12,10 @@ const navLinks = [
     path: "#about",
   },
   {
+    title: "Work",
+    path: "#work",
+  },
+  {
     title: "Projects",
     path: "#projects",
   },
@@ -29,8 +33,14 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-90">
-      <div className="flex flex-wrap items-center justify-between mx-auto p-8">
+    <nav className="fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-90 h-20">
+      <div className="flex items-center justify-between mx-auto px-8 h-full">
+        {/* Left Section: Name */}
+        <div className="flex items-center">
+          <h1 className="text-lg font-semibold text-white">Isabel Wang</h1>
+        </div>
+
+        {/* Right Section: Links */}
         <div className="mobile-menu ml-auto block md:hidden">
           {!navbarOpen ? (
             <button

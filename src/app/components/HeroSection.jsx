@@ -3,17 +3,17 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section>
-      <div className="grid grid-cols-1 lg:grid-cols-12">
+    <section id="hero">
+      <div className="grid grid-cols-1 lg:grid-cols-12 pb-20">
         <div className="col-span-7 place-self-center text-center">
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-pink-600">
-              Hello, I'm{" "}
+              Hi, I&apos;m{" "}
             </span>
             Isabel!
           </h1>
-          <p className="text-[#ADB7BE] mb-6 text-lg lg:text-xl">
-            Software Engineer
+          <p className="text-white mb-10 text-lg lg:text-xl">
+            Just a Computer Science major at NUS.
           </p>
           <a
             href="/Yanxiang_CV.pdf"
