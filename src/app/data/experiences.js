@@ -1,24 +1,21 @@
 const experiences = [
   {
-    icon: "https://via.placeholder.com/50", // Replace with your logo URL
     title: "Bachelor in Computing, Computer Science",
     institution: "National University of Singapore",
     details: [
-      "GPA: First Class Honours",
-      "Relevant Coursework: Data Structures & Algorithms, Operating Systems, Programming Methodology",
+      "GPA: 4.68/5.00",
+      "Relevant Coursework: Data Structures & Algorithms, Software Engineering, Programming Methodology",
     ],
-    date: "Jan 2018 - Oct 2019",
+    date: "Aug 2023 - Present",
   },
   {
-    icon: "https://via.placeholder.com/50", // Replace with another logo URL
-    title: "Software Engineer Intern",
-    institution: "Tech Startup",
+    title: "Full Stack Software Developer Intern",
+    institution: "Mavericks Consulting",
     details: [
-      "Developed scalable APIs using Node.js.",
-      "Implemented responsive UI with React.",
-      "Optimized database queries for faster performance.",
+      "Developed scalable solutions using Next.js, React, and Directus",
+      "Followed Agile methodologies to deliver projects on time",
     ],
-    date: "May 2021 - Jul 2021",
+    date: "Dec 2024 - Present",
   },
 ];
 

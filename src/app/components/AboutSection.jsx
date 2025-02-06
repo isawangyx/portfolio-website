@@ -7,8 +7,7 @@ const AboutSection = () => {
         <h3 className="text-4xl font-bold mb-4 text-white">About Me.</h3>
         <p className="text-lg text-white ">
           I’m a Computer Science sophomore at the National University of
-          Singapore with a passion for creating innovative and impactful
-          technological solutions.
+          Singapore with a passion for building tech that makes a difference.
         </p>
         <Cards />
       </div>

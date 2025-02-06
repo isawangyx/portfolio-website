@@ -11,12 +11,6 @@ const externalsData = [
       "Ongoing: This project aims to automate and streamline the processes of sponsorship, adoption, and volunteer management, reducing manual workloads and improving efficiency.",
     image: "/images/dscnus.png",
   },
-  {
-    id: 2,
-    title: "NUS Computing StartIT",
-    description: "Ongoing",
-    image: "/images/startit.jpg",
-  },
 ];
 
 const ExternalSection = () => {

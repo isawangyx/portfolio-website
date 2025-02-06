@@ -13,7 +13,7 @@ const HeroSection = () => {
             Isabel!
           </h1>
           <p className="text-white mb-10 text-lg lg:text-xl">
-            Just a Computer Science major at NUS.
+            A matcha-fueled CS major.
           </p>
           <a
             href="/Yanxiang_CV.pdf"
