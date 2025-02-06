@@ -1,8 +1,15 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const ProjectCard = ({ title, description, imgUrl, tags = [] }) => {
   return (
-    <div className="bg-[#4b496a] rounded-lg overflow-hidden shadow-lg text-white">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }} 
+      animate={{ opacity: 1, y: 0 }} 
+      transition={{ duration: 0.5, ease: "easeOut" }} 
+      whileHover={{ scale: 1.05 }} 
+      className="bg-[#655781] rounded-lg overflow-hidden shadow-lg text-white"
+    >
       {/* Image Section */}
       <div
         className="h-32 md:h-40 rounded-t-lg"
@@ -28,7 +35,7 @@ const ProjectCard = ({ title, description, imgUrl, tags = [] }) => {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
