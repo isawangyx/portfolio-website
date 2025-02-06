@@ -7,6 +7,10 @@
   --foreground: #171717;
 }
 
+html {
+  scroll-padding-top: 6rem; /* Adjust based on navbar height */
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;

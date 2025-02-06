@@ -8,7 +8,7 @@ import Image from "next/image";
 const EmailSection = () => {
   return (
     <section id="contact" className="my-12 md:my-12 py-24 gap-4 relative">
-      <h5 className="text-xl font-bold text-white my-2">Let&apos;s Connect</h5>
+      <h3 className="text-3xl font-bold text-white my-2">Let&apos;s Connect</h3>
       <div className="socials flex flex-row gap-2">
         <Link href="https://github.com/isawangyx">
           <Image src={GithubIcon} alt="Github Icon" />
