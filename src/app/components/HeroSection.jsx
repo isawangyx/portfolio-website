@@ -55,13 +55,13 @@ const HeroSection = () => {
   return (
     <section id="hero">
       <div className="col-span-7 lg:col-start-3 mx-auto text-center">
-        <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold pt-10">
+        <h1 className="text-white mb-4 text-5xl lg:text-6xl font-extrabold pt-10">
           <span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-pink-600">
             Hi, I&apos;m{" "}
           </span>
           Isabel!
         </h1>
-        <p className="text-white mb-20 text-lg lg:text-xl">
+        <p className="text-white mb-20 text-xl lg:text-3xl">
           I&apos;m a{" "}
           <span aria-live="polite">
             {phrases[index].substring(0, subIndex)}
