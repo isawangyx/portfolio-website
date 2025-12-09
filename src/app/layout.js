@@ -11,9 +11,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        {children}
-        <Footer />
+        <div className="container mt-24 mx-auto px-12 py-4 w-4/5">
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
