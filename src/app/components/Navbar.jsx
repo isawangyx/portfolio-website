@@ -1,27 +1,27 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
 import NavLink from "./NavLink";
+import Link from "next/link";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
 
 const navLinks = [
   {
     title: "About",
-    path: "#about",
+    path: "/#about",
   },
   {
     title: "Work",
-    path: "#work",
+    path: "/#work",
   },
   {
     title: "Projects",
-    path: "#projects",
+    path: "/projects",
   },
   {
-    title: "External",
-    path: "#external",
+    title: "Writing",
+    path: "/writing",
   },
 ];
 
@@ -33,7 +33,9 @@ const Navbar = () => {
       <div className="flex items-center justify-between mx-auto px-8 h-full">
         {/* Left Section: Name */}
         <div className="flex items-center">
-          <h1 className="text-lg font-semibold text-white">IW</h1>
+          <Link href="/" className="text-lg font-semibold text-white">
+            IW
+          </Link>
         </div>
 
         {/* Right Section: Links */}

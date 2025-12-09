@@ -14,7 +14,8 @@ const WorkExperience = () => {
       transition={{ duration: 1, ease: "easeOut" }}
       className="text-white py-12 px-6"
     >
-      <h2 className="text-4xl font-bold text-center mb-12">Work Experience.</h2>
+      <h2 className="text-4xl font-bold text-center">Experiences</h2>
+      <p className="opacity-70 text-lg text-center mb-8">My journey so far</p>
       <div className="relative">
         {/* Timeline Line */}
         <div className="absolute left-8 top-0 w-1 bg-[#696176] h-full"></div>
