@@ -1,29 +1,80 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
+const phrases = [
+  "software engineer.",
+  "CS major.",
+  "machine learning hobbyist.",
+  "matcha lover.",
+  "dancer.",
+];
+
+const TYPING_SPEED = 60; // ms per character
+const DELETING_SPEED = 35;
+const PAUSE_AFTER = 1200;
+
 const HeroSection = () => {
+  const [index, setIndex] = useState(0);
+  const [subIndex, setSubIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [blink, setBlink] = useState(true);
+
+  useEffect(() => {
+    const blinkInterval = setInterval(() => setBlink((b) => !b), 500);
+    return () => clearInterval(blinkInterval);
+  }, []);
+
+  useEffect(() => {
+    if (index >= phrases.length) {
+      setIndex(0);
+      return;
+    }
+
+    if (!isDeleting && subIndex === phrases[index].length) {
+      const timeout = setTimeout(() => setIsDeleting(true), PAUSE_AFTER);
+      return () => clearTimeout(timeout);
+    }
+
+    if (isDeleting && subIndex === 0) {
+      setIsDeleting(false);
+      setIndex((i) => (i + 1) % phrases.length);
+      return;
+    }
+
+    const timeout = setTimeout(
+      () => {
+        setSubIndex((s) => s + (isDeleting ? -1 : 1));
+      },
+      isDeleting ? DELETING_SPEED : TYPING_SPEED
+    );
+
+    return () => clearTimeout(timeout);
+  }, [subIndex, index, isDeleting]);
+
   return (
     <section id="hero">
-      <div className="grid grid-cols-1 lg:grid-cols-12 pb-20">
-        <div className="col-span-7 place-self-center text-center">
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-pink-600">
-              Hi, I&apos;m{" "}
-            </span>
-            Isabel!
-          </h1>
-          <p className="text-white mb-10 text-lg lg:text-xl">
-            A matcha-fueled CS major.
-          </p>
-          <a
-            href="/Yanxiang_CV.pdf"
-            download
-            className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-200 text-white"
+      <div className="col-span-7 lg:col-start-3 mx-auto text-center">
+        <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold pt-10">
+          <span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-pink-600">
+            Hi, I&apos;m{" "}
+          </span>
+          Isabel!
+        </h1>
+        <p className="text-white mb-20 text-lg lg:text-xl">
+          I&apos;m a{" "}
+          <span aria-live="polite">
+            {phrases[index].substring(0, subIndex)}
+          </span>
+          <span
+            aria-hidden="true"
+            className={`ml-1 inline-block ${
+              blink ? "opacity-100" : "opacity-0"
+            }`}
           >
-            Download CV
-          </a>
-        </div>
-        <div className="col-span-5 place-self-center"></div>
+            |
+          </span>
+        </p>
       </div>
     </section>
   );

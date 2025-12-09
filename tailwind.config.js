@@ -13,9 +13,6 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
-      fontFamily: {
-        sans: ["var(--font-poppins)", ...fontFamily.sans],
-      },
       animation: {
         fadeInUp: "fadeInUp 1s ease-out",
         fadeIn: "fadeIn 1s ease-out forwards",

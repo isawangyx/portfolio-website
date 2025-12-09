@@ -23,10 +23,6 @@ const navLinks = [
     title: "External",
     path: "#external",
   },
-  {
-    title: "Contact",
-    path: "#contact",
-  },
 ];
 
 const Navbar = () => {
@@ -37,7 +33,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between mx-auto px-8 h-full">
         {/* Left Section: Name */}
         <div className="flex items-center">
-          <h1 className="text-lg font-semibold text-white">Isabel Wang</h1>
+          <h1 className="text-lg font-semibold text-white">IW</h1>
         </div>
 
         {/* Right Section: Links */}
